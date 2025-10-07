@@ -24,7 +24,7 @@ TextEditingController passwordController = TextEditingController();
 class _LoginState extends State<Login> {
   @override
   bool isPassword = true;
-  List<String> allowedUsers = ["0799999999", "123456", "0796305525", "123789"];
+  List<String> allowedUsers = ["0790718552", "123456","0799999999", "123456","0776305523","456789"];
 
   void tryLogin(String input) {
     String phone = input.trim();
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
     print("login");
     print(ApiConst.Login);
     try {
-      //final body = {"phone": phone, "password": password};
+      final body = {"phone": phone, "password": password};
       final response = await http.post(
         Uri.parse(ApiConst.Login),
         body: jsonEncode({"phone": phone, "password": password}),
