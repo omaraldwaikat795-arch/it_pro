@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
         SharedPreferencesHelper.saveString("token", token);
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DataScreen()),
+          MaterialPageRoute(builder: (context) => Login2()),
         );
       }
     } catch (e) {

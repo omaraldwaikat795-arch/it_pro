@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:it_pro/core/units/db_helper.dart';
 import 'package:it_pro/screens/Approvals.dart';
+import 'package:it_pro/screens/Cache_reports.dart';
 import 'package:it_pro/screens/Powers.dart';
+import 'package:it_pro/screens/Quantity_reports.dart';
 import 'package:it_pro/screens/SQLite.dart';
+import 'package:it_pro/screens/Total_sales.dart';
 import 'package:it_pro/screens/data_screen.dart';
 import 'package:it_pro/screens/login.dart';
 import 'package:it_pro/screens/login2.dart';
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Login(),
+      home: Login2(),
     );
   }
 }

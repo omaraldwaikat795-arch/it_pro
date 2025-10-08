@@ -73,7 +73,7 @@ class _ApprovalsState extends State<Approvals> {
             SizedBox(height: 20),
             InkWell(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => CacheReports()),
                 );

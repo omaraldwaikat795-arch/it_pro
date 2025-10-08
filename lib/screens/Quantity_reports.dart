@@ -15,6 +15,7 @@ class QuantityReports extends StatefulWidget {
          title: Text("Quantity reports",style: TextStyle(color: Colors.white),),
          backgroundColor: Color(0xFF1E5AA8),
        ),
+
      );
    }
  }
