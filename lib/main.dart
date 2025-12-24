@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-// import 'package:it_pro/core/units/db_helper.dart';
-// import 'package:it_pro/screens/Approvals.dart';
-// import 'package:it_pro/screens/Cache_reports.dart';
-// import 'package:it_pro/screens/Powers.dart';
-// import 'package:it_pro/screens/Quantity_reports.dart';
-// import 'package:it_pro/screens/SQLite.dart';
-// import 'package:it_pro/screens/Total_sales.dart';
-// import 'package:it_pro/screens/data_screen.dart';
-// import 'package:it_pro/screens/login.dart';
-// import 'package:it_pro/screens/login2.dart';
-// import 'package:it_pro/screens/save_data.dart';
+import 'package:flutter/rendering.dart';
+import "package:flutter_bloc/flutter_bloc.dart";
+import 'package:it_pro/feature/auth/presentation/cubit/login_cubit.dart';
+import 'package:it_pro/feature/auth/presentation/view/Report/custamers.dart';
+import 'package:it_pro/feature/auth/presentation/view/login/Login.dart';
+import 'package:it_pro/feature/auth/presentation/view/login/login2.dart';
+import 'package:it_pro/feature/auth/presentation/view/Report/Report.dart';
+import 'package:it_pro/feature/auth/presentation/view/Report/Sales_reports.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  debugPaintSizeEnabled = false;
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +19,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: Login(),
+    return MultiBlocProvider(
+      providers: [BlocProvider<LoginCubit>(create: (context) => LoginCubit())],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        home: Custamers(),
+      ),
     );
   }
 }
